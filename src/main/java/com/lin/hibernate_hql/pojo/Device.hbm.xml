@@ -38,5 +38,6 @@
         <property name="pointId" type="java.lang.String">
             <column name="POINTID" />
         </property>
+<!--         <cache usage="read-write"/> -->
     </class>
 </hibernate-mapping>

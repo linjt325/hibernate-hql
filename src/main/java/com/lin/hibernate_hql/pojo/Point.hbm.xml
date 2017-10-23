@@ -31,8 +31,10 @@
         </property>
 		
 		<set name="devices" table="patrol_point_device" lazy="true" inverse="true" fetch="join">
+<!-- 			<cache usage="read-write"/> -->
 				<key column="pointId"></key>
 			<one-to-many class="com.lin.hibernate_hql.pojo.Device" ></one-to-many>
-		</set>        
+		</set>     
+<!-- 		<cache usage="read-write"/> -->
     </class>
 </hibernate-mapping>

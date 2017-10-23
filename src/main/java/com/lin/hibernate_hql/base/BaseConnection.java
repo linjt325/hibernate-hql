@@ -30,8 +30,8 @@ public class BaseConnection {
 		sessionFactory=configuration.buildSessionFactory(registry);
 		
 		//ʹ��getCurrentSession  session�������ύ���Զ��ر�
-		session=sessionFactory.getCurrentSession();
-//		session=sessionFactory.openSession();
+//		session=sessionFactory.getCurrentSession();
+		session=sessionFactory.openSession();
 		transaction=session.beginTransaction();
 		
 	}
@@ -40,7 +40,7 @@ public class BaseConnection {
 	public void destory(){
 		
 		transaction.commit();
-//		session.close();
+		session.close();
 		sessionFactory.close();
 	}
 }
