@@ -63,7 +63,7 @@ public class HQLTest extends BaseConnection {
 
 		transaction = session.beginTransaction();
 
-		Point p1 = (Point) session.(Point.class,
+		Point p1 = (Point) session.get(Point.class,
 				"8a8a9c3f572251eb0157225b201a0000");
 
 		System.out.println(p);
